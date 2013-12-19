@@ -7,4 +7,6 @@ class Artist < ActiveRecord::Base
   validates_uniqueness_of(:name)
   validates_uniqueness_of(:number)
 
+  has_many :pieces, dependent: :nullify
+  belongs_to :style
 end

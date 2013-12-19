@@ -1,5 +1,8 @@
 require 'spec_helper'
 
 describe Style do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let!(:style1) { FactoryGirl.create(:style) }
+  it { should validate_presence_of(:name) }
+  it { should validate_uniqueness_of(:name) }
+  it { should have_many(:artists) }
 end

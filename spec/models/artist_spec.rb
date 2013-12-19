@@ -17,4 +17,6 @@ describe Artist do
     expect(artist2.number).should_not include("asdf")
   end
 
+  it { should have_many(:pieces).dependent(:nullify) }
+  it { should belong_to(:style) }
 end

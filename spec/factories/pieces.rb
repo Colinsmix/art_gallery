@@ -3,8 +3,8 @@
 FactoryGirl.define do
   factory :piece do
     sequence(:artist_id) {|n| n}
-    creation_date "12/18/2013"
-    avail_date "12/18/2013"
+    creation_date Date.today
+    avail_date Date.today
     type ""
     sold_at 1.5
     sale_id 1

@@ -1,5 +1,9 @@
 require 'spec_helper'
 
 describe PieceCollection do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { should validate_presence_of(:piece_id) }
+  it { should validate_presence_of(:collection_id) } 
+  it { should belong_to(:piece) }
+  it { should belong_to(:collection) }
+  
 end
